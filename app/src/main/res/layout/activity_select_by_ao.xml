@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg">
+
+    <!--http://www.tutorialsbuzz.com/2015/11/android-recyclerview-with-cardview.html-->
+    <!--http://www.tutorialsbuzz.com/2015/11/android-recyclerview-with-cardview.html-->
+    <!--http://www.tutorialsbuzz.com/2015/11/android-recyclerview-with-cardview.html-->
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_myaccommodation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="bottom|center_horizontal"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/profile_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_topimage"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_myaccommodation"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:layout_collapseMode="pin" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!--relative layout for main scroll view (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_mainparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--relative layout for nipanjhouse one,two,three (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_nipanjhouseonemain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp">
+
+
+                <!--LinearLayout for nipanjhouseone (Start)-->
+                <LinearLayout
+                    android:id="@+id/ll_nipanjhouseone"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/tv_nipanjhouseone"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.3"
+                        android:background="@drawable/btn_background_nipanjhouse"
+                        android:gravity="center"
+                        android:shadowColor="#A8A8A8"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="5"
+                        android:text="Casa Nipa B &amp; B"
+                        android:textAllCaps="false"
+                        android:textColor="@color/darkblack"
+                        android:textSize="20sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_imagehouse"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:paddingBottom="15dp"
+                        android:paddingEnd="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="18dp"
+                        android:paddingStart="18dp"
+                        android:paddingTop="15dp">
+
+                        <ImageView
+                            android:id="@+id/iv_houseone"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_setting" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <!--rLinearLayout for nipanjhouseone (End)-->
+
+                <!--LinearLayout for nipanjhousetwo (Start)-->
+                <LinearLayout
+                    android:id="@+id/ll_nipanjhousetwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/ll_nipanjhouseone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <!--<TextView
+                        android:id="@+id/tv_nipanjhousetwo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.3"
+                        android:background="@drawable/btn_background_nipanjhouse"
+                        android:gravity="center"
+                        android:shadowColor="#A8A8A8"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="5"
+                        android:text="\?"
+                        android:textAllCaps="false"
+                        android:textColor="@color/darkblack"
+                        android:textSize="20sp" />-->
+
+                    <FrameLayout
+                        android:id="@+id/fl_posttwo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.3">
+
+                        <TextView
+                            android:id="@+id/tv_nipanjhousetwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_background_nipanjhouse"
+                            android:gravity="center"
+                            android:shadowColor="#A8A8A8"
+                            android:shadowDx="0"
+                            android:shadowDy="0"
+                            android:shadowRadius="5"
+                            android:text="\?"
+                            android:textAllCaps="false"
+                            android:textColor="@color/darkblack"
+                            android:textSize="20sp" />
+
+                    </FrameLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_imagehousetwo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:paddingBottom="15dp"
+                        android:paddingEnd="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="18dp"
+                        android:paddingStart="18dp"
+                        android:paddingTop="15dp">
+
+                        <ImageView
+                            android:id="@+id/iv_housetwo"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_setting"/>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--rLinearLayout for nipanjhousetwo (End)-->
+
+                <!--LinearLayout for nipanjhousethree (Start)-->
+                <LinearLayout
+                    android:id="@+id/ll_nipanjhousethree"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/ll_nipanjhousetwo"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                   <!-- <TextView
+                        android:id="@+id/tv_nipanjhousethree"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.3"
+                        android:background="@drawable/btn_background_nipanjhouse"
+                        android:gravity="center"
+                        android:shadowColor="#A8A8A8"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="5"
+                        android:text="\?"
+                        android:textAllCaps="false"
+                        android:textColor="@color/darkblack"
+                        android:textSize="20sp" />-->
+
+                    <FrameLayout
+                        android:id="@+id/fl_postthree"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.3">
+
+                        <TextView
+                            android:id="@+id/tv_nipanjhousethree"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_background_nipanjhouse"
+                            android:gravity="center"
+                            android:shadowColor="#A8A8A8"
+                            android:shadowDx="0"
+                            android:shadowDy="0"
+                            android:shadowRadius="5"
+                            android:text="\?"
+                            android:textAllCaps="false"
+                            android:textColor="@color/darkblack"
+                            android:textSize="20sp" />
+
+                    </FrameLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_imagehousethree"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:paddingBottom="15dp"
+                        android:paddingEnd="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="18dp"
+                        android:paddingStart="18dp"
+                        android:paddingTop="15dp">
+
+                        <ImageView
+                            android:id="@+id/iv_housethree"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_setting" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <!--rLinearLayout for nipanjhousethree (End)-->
+
+            </RelativeLayout>
+            <!--relative layout for nipanjhouse one,two,three (End)-->
+
+            <!--relative layout for about/help button (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_btn_abouthelp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/rl_nipanjhouseonemain"
+                android:layout_margin="20dp">
+
+                <Button
+                    android:id="@+id/btn_abouthelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/btn_background_abouthelp"
+                    android:shadowColor="#A8A8A8"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:text="About / Help"
+                    android:textAllCaps="false"
+                    android:textColor="@color/milkywhite"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+            <!--relative layout for about/help button (End)-->
+
+            <!--            <TextView
+                            android:id="@+id/testing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rl_btn_abouthelp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="10dp"
+                            android:padding="10dp"
+                            android:text="Testing Text"
+                            android:textSize="18sp" />-->
+
+
+            <ImageView
+                android:id="@+id/ivtesting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_btn_abouthelp"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+        <!--relative layout for main scroll view (End)-->
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+apply plugin: 'bintray-release'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.3.4'
+    }
+}
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 22
+    }
+}
+
+publish {
+    userOrg = 'blundell'
+    groupId = 'com.blundell'
+    artifactId = 'arrow-logger'
+    publishVersion = '1.2.0'
+    description = 'ArrowLogger allows you to manicly shake your hands infront of your users face and be like "Helllooo you missed this!".'
+    website = 'https://github.com/blundell/ArrowLogger'
+}

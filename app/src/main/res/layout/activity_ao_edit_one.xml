@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg">
+
+    <!--Main Relative layout for accomodation owner id (Start)-->
+    <RelativeLayout
+        android:id="@+id/rl_ao_post_id_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp">
+
+        <!--relative layout holds edit text (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_ao_post_id_edit_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_edittextain"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="AIN : "
+                android:textColor="@color/darkblack"
+                android:textSize="15sp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ti_ao_post_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="70dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginStart="70dp">
+
+                <EditText
+                    android:id="@+id/et_ao_post_id_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="12dp"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@color/darkblack"
+                    android:textColorHint="@color/lightblack"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_ao_done_one"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_ok"
+                android:gravity="center"
+                android:onClick="Save"
+                android:padding="5dp"
+                android:text="ok" />
+
+        </RelativeLayout>
+        <!--relative layout holds edit text (End)-->
+
+        <!--relative layout holds text (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_ao_post_id_text_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_textain"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="AIN : "
+                android:textColor="@color/darkblack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_ao_id_one"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="70dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/darkblack"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+        <!--relative layout holds text (End)-->
+
+    </RelativeLayout>
+    <!--Main Relative layout for accomodation owner id (End)-->
+
+    <!--Main Relative layout for accomodation owner Logo image and main image (Start)-->
+    <RelativeLayout
+        android:id="@+id/rl_ao_images"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_ao_post_id_edit_text"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_ao_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/iv_ao_title_image"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_casanipa_title" />
+
+            <ImageView
+                android:id="@+id/iv_ao_main_image"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_casanipa_main"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <!--Main Relative layout for accomodation owner Logo image and main image (End)-->
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_ao_images">
+
+        <RelativeLayout
+            android:id="@+id/rl_ao_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="20dp">
+
+            <!--Relative layout one for Refresh (Start)-->
+            <RelativeLayout
+                android:id="@+id/rlmain_refresh_one"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/btn_background_nipanjhouse">
+
+                <RelativeLayout
+                    android:id="@+id/rl_refresh_one"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Refresh"
+                        android:textColor="@color/darkblack"
+                        android:textSize="20dp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <!--Relative layout one for Refresh (End)-->
+
+            <!--Relative layout two for change accommodation (Start)-->
+            <RelativeLayout
+                android:id="@+id/rlmain_change_accommodation_one"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/rlmain_refresh_one"
+                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/btn_background_nipanjhouse"
+                android:onClick="Get">
+
+                <RelativeLayout
+                    android:id="@+id/rl_change_accommodation_one"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Change Accommodation"
+                        android:textColor="@color/darkblack"
+                        android:textSize="20dp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <!--Relative layout two for change accommodation (End)-->
+
+            <!--Relative layout three for back (Start)-->
+            <RelativeLayout
+                android:id="@+id/rlmain_back_one"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/rlmain_change_accommodation_one"
+                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/btn_background_nipanjhouse">
+
+                <RelativeLayout
+                    android:id="@+id/rl_back_one"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Back"
+                        android:textColor="@color/darkblack"
+                        android:textSize="20dp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <!--Relative layout three for back (End)-->
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

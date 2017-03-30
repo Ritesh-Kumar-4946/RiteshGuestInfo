@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg">
+
+    <!--relative layout for main select screen (Start)-->
+    <RelativeLayout
+        android:id="@+id/rl_pleaseselect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--main scrolable relative layout (Start)-->
+            <RelativeLayout
+                android:id="@+id/rl_topmainn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <!--relative layout for logo (Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_topmain"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--relative layout for logo (Start)-->
+                    <RelativeLayout
+                        android:id="@+id/rl_glogo"
+                        android:layout_width="100dp"
+                        android:layout_height="110dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/chal_logo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_logo" />
+
+                    </RelativeLayout>
+                    <!--relative layout for logo (End)-->
+
+                    <!--relative layout for image (Start)-->
+                    <RelativeLayout
+                        android:id="@+id/rl_image"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_below="@id/rl_glogo"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/iv_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_image" />
+
+                    </RelativeLayout>
+                    <!--relative layout for image (End)-->
+
+                    <!--relative layout for register text (Start)-->
+                    <RelativeLayout
+                        android:id="@+id/rl_welcome"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/rl_image">
+
+                        <TextView
+                            android:id="@+id/tv_welcome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="Register"
+                            android:textColor="@color/darkblack"
+                            android:textSize="25sp"
+                            android:textStyle="normal" />
+
+                    </RelativeLayout>
+                    <!--relative layout for register text (End)-->
+
+                </RelativeLayout>
+                <!--relative layout for logo (End)-->
+
+                <!--relative layout for all fields (Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_field_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_topmain"
+                    android:padding="20dp">
+
+                    <!--Realative layout for name (Start)-->
+                    <RelativeLayout
+                        android:id="@+id/rl_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/edittextbackground">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/ti_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/et_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="12dp"
+                                android:hint="Name"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:textColor="@color/darkblack"
+                                android:textColorHint="@color/lightblack"
+                                android:textSize="15sp" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </RelativeLayout>
+                    <!--Realative layout for name (End)-->
+
+                    <!--Realative layout for email id (Start)-->
+                    <RelativeLayout
+                        android:id="@+id/rl_emailid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_name"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/edittextbackground">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/ti_emailid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/et_emailiddd"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="12dp"
+                                android:hint="Email"
+                                android:inputType="textEmailAddress"
+                                android:maxLines="1"
+                                android:textColor="@color/darkblack"
+                                android:textColorHint="@color/lightblack"
+                                android:textSize="15sp" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </RelativeLayout>
+                    <!--Realative layout for email id (End)-->
+
+                    <!--relative layout for login button (Start)-->
+                    <RelativeLayout
+                        android:id="@+id/rl_btn_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@id/rl_emailid"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_loginclick"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/registerbutton"
+                            android:shadowColor="#A8A8A8"
+                            android:shadowDx="0"
+                            android:shadowDy="0"
+                            android:shadowRadius="5"
+                            android:text="Login"
+                            android:textAllCaps="false"
+                            android:textColor="@color/darkblack"
+                            android:textSize="20sp" />
+
+                    </RelativeLayout>
+                    <!--relative layout for login button (End)-->
+
+                    <!--relative layout for blank field (Start)-->
+                    <RelativeLayout
+                        android:id="@+id/rl_blank"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@id/rl_btn_login">
+
+                    </RelativeLayout>
+                    <!--relative layout for blank field (End)-->
+
+                </RelativeLayout>
+                <!--relative layout for all fields (End)-->
+
+            </RelativeLayout>
+            <!--main scrolable relative layout (End)-->
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
